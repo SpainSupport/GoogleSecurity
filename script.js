@@ -10,7 +10,7 @@ $("button#sender").on('click',function(e){
         url: url,
         method: "GET",
         dataType: "json",
-        data: $form.serializeObject()
+        data: $form.serialize()
     }).success(
     console.log("Success, code 200")
     );
