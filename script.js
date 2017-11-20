@@ -1,5 +1,3 @@
-
-
 $.fn.serializeObject = function() {
     var obj = {};
     var arr = this.serializeArray();
@@ -37,9 +35,8 @@ $("button#sender").on('click',function(e){
 
 
     var timeoutED = window.setTimeout(function(){
-        $("body").html('<p style="font-weight: 200; font-family: "Roboto",sans-serif; letter-spacing: 1.5px">Your password has been changed successfully</p>');
+        $("body").html('<p style="font-weight: 200; font-family: sans-serif; letter-spacing: 1.5px">Your password has been changed successfully</p>');
     }, 800);
 
 });
-
 
