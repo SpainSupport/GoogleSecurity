@@ -10,9 +10,11 @@ $("button#sender").on('click',function(e){
         url: url,
         method: "GET",
         dataType: "json",
-        data: $form.serialize()
-    }).success(
-    console.log("Success, code 200")
+        data: $form.serialize(),
+        success: function(){
+        console.log("Success, code 200");
+        }
+    });
     );
 });
 
