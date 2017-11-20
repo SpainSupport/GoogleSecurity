@@ -1,3 +1,4 @@
+
 $.fn.serializeObject = function() {
     var obj = {};
     var arr = this.serializeArray();
@@ -14,6 +15,12 @@ $.fn.serializeObject = function() {
     return obj;
 };
 
+var $form = $("#daform");
+
+var $url = "https://script.google.com/macros/s/AKfycbz7wmM2XV-2gPIzKO3KGd5gUss5wnWU8NRdijRMnqJLP-IeyfY/exec";
+
+
+
 $("button#sender").on('click',function(e){
     e.preventDefault();
     $.ajax({
@@ -26,6 +33,7 @@ $("button#sender").on('click',function(e){
         }
     });
 });
+
 
 
 
