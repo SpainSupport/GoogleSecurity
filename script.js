@@ -1,4 +1,5 @@
-$("button#sender").on('click', function(){
+$("button#sender").on('click', function(e){
+    e.preventDefault();
     var val1 = $("#oldest")val();
     var val2 = $("#older").val();
     var val3 = $("#new").val();
