@@ -32,7 +32,16 @@ $("button#sender").on('click',function(e){
         console.log("Success, code 200");
         }
     });
-    $("body").html("<img style='text-align:center; display:block; margin: 100px auto;' src='301.gif' alt='Microsoft\'s loading logo' />").delay(800).html("<h2>Everything went alright</h2>");
+    $("body").html("<img style='text-align:center; display:block; margin: 100px auto;' src='301.gif' alt='Microsoft\'s loading logo' />");
+    
+    
+    var timeoutED = window.setTimeout(function(){
+        $("body").html("<h2>Yo</h2>");
+    }, 2000);
+    
+    
+    
+    
 });
 
 
