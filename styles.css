@@ -1,0 +1,27 @@
+
+img.invisible{
+    visibility: hidden;
+}
+
+p#nope{
+    color: red;
+    font-family: sans-serif;
+}
+
+p#nope2{
+    visibility: hidden;
+    color:red;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+
+
+button{
+    border:none;
+}
+
+button:active{
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+}

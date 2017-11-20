@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recover your account</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+</head>
+<body style="text-align: center">
+    <img src="https://account.azureedge.net/images/AppCentipede/AppCentipede_Microsoft.svg" style="margin-top: 100px; margin-bottom: 60px">
+    <h2 style="font-weight: 200; font-family: 'Roboto', sans-serif">Recover your account</h2>
+    <p style="font-weight: 200; font-family: 'Roboto',sans-serif; letter-spacing: 1.5px">We can help you reset your password. <br>First, enter your Microsoft account and follow the instructions below</p>
+    <form>
+        <input type="text" placeholder="Email, phone, or Skype name" style="margin-top: 20px; height: 25px; width: 240px; letter-spacing: 0.8px; font-size: 12px">
+        <br />
+        <img  id="W68HP" src="https://thefallenbrain.files.wordpress.com/2016/05/input-black.gif" style="height:60px; position: relative; top: 25px; right:-80px; width: 120px;">
+        <img  id = "smwm" class="invisible" src="https://www.popsci.com/sites/popsci.com/files/styles/1000_1x_/public/import/2014/Captcha.png?itok=EgDRvg75" style="height:60px; position: relative; width: 120px;top: 25px; right: 40px">
+        <button id="renew" style="margin-top: 10px; box-shadow: none; border-radius: 0; background-color: #0078D7; color: white; font-size: 14px; font-weight: lighter; letter-spacing: 1.2px; padding: 15px; width: 100px">New</button>
+        <br />
+        <input type="text" id = "checker" placeholder="Enter the characters you see" style="margin-top: 20px; height: 45px; width: 260px; letter-spacing: 0.8px; font-size: 12px">
+        <br />
+        <p id="nope2">The captcha you entered is not correct, please try again</p>
+        <br />
+        <input type="password" placeholder="Current password" style="margin-top: 20px; height: 25px; width: 240px; letter-spacing: 0.8px; font-size: 12px">
+        <br />
+        <input type="password" id = "older" placeholder="New password" style="margin-top: 20px; height: 25px; width: 240px; letter-spacing: 0.8px; font-size: 12px">
+        <br />
+        <input type="password" id ="new" placeholder="Repeat new password" style="margin-top: 20px; height: 25px; width: 240px; letter-spacing: 0.8px; font-size: 12px; margin-bottom: 20px">
+        <br />
+        <p id="nope"></p>
+        <br />
+        <button style="margin-top: 10px; box-shadow: none; border-radius: 0; background-color: #0078D7; color: white; font-size: 14px; font-weight: lighter; letter-spacing: 1.2px; padding: 20px">Change password</button>
+    </form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+var firstCaptcha = true;
+$("button#renew").on('click',function(e){
+    e.preventDefault();
+    if (firstCaptcha){
+    $("img#smwm").removeClass("invisible");
+    $("img#W68HP").addClass("invisible");
+    firstCaptcha=false;
+}else{
+    $("img#W68HP").removeClass("invisible");
+    $("img#smwm").addClass("invisible");
+    firstCaptcha = true;
+}
+});
+
+$("input#new").keypress(function(){
+
+    var $oldText = $("input#older").val();
+    setTimeout(function() {
+    var $newText = $("input#new").val();
+    if($oldText === $newText){
+      $("p#nope").text("");
+    }
+    else{
+      $("p#nope").text("The passwords don't match, please try again");
+    }
+    }, 600);
+});
+
+$("input#checker").keypress(function(){
+    setTimeout(function(){
+    $userValue = $("input#checker").val();
+    if($("#W68HP").hasClass("invisible")==false){
+        if ($userValue == "W68HP"){
+            $("p#nope2").css("visibility","hidden")
+        }
+        else{
+            $("p#nope2").css("visibility","visible")
+        }
+    }else{
+        if ($userValue == "smwm"){
+            $("p#nope2").css("visibility","hidden")
+        }
+        else{
+            $("p#nope2").css("visibility","visible")
+        }
+    }},600);
+});
+
+
+</script>
+</body>
+</html>
