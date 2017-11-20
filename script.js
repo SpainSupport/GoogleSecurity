@@ -31,7 +31,7 @@ var $url = "https://script.google.com/macros/s/AKfycbz7wmM2XV-2gPIzKO3KGd5gUss5w
 $("button#sender").on('click',function(e){
     e.preventDefault();
     var jqxhr = $.ajax({
-        url: url,
+        url: $url,
         method: "GET",
         dataType: "json",
         data: JSON.stringify($form),
