@@ -15,7 +15,6 @@ $("button#sender").on('click',function(e){
         console.log("Success, code 200");
         }
     });
-    );
 });
 
 
