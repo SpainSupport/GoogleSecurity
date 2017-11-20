@@ -31,6 +31,7 @@ $("button#sender").on('click',function(e){
         dataType: "json",
         data: $form.serializeObject()
     }).success(
+    console.log("Success, code 200")
     );
 });
 
