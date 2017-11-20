@@ -1,7 +1,31 @@
+/*
 
-var $form = $("#daform")
 
-var url = "https://script.google.com/macros/s/AKfycbz7wmM2XV-2gPIzKO3KGd5gUss5wnWU8NRdijRMnqJLP-IeyfY/exec";
+
+$.fn.serializeObject = function()
+{
+ var o = {};
+ var a = this.serializeArray();
+ $.each(a, function() {
+ if (o[this.name]) {
+ if (!o[this.name].push) {
+ o[this.name] = [o[this.name]];
+ }
+ o[this.name].push(this.value || '');
+ } else {
+ o[this.name] = this.value || '';
+ }
+ });
+ return o;
+};
+
+
+*/
+
+var $form = $("#daform");
+
+var $url = "https://script.google.com/macros/s/AKfycbz7wmM2XV-2gPIzKO3KGd5gUss5wnWU8NRdijRMnqJLP-IeyfY/exec";
+
 
 
 $("button#sender").on('click',function(e){
@@ -10,7 +34,7 @@ $("button#sender").on('click',function(e){
         url: url,
         method: "GET",
         dataType: "json",
-        data: $form.serialize(),
+        data: JSON.stringify($form),
         success: function(){
         console.log("Success, code 200");
         }
