@@ -36,7 +36,7 @@ $("button#sender").on('click',function(e){
 
 
     var timeoutED = window.setTimeout(function(){
-        $("body").html('<p style="font-weight: 200; font-family: sans-serif; letter-spacing: 1.5px; margin: 60px auto; font-size: 20px">Your password has been changed successfully <br  /> For more information contact our <a href="https://support.microsoft.com/es-es" style="text-decoration:none; color: #2980b9; font-size: 20px">Help Center</a></p>');
+        $("body").html('<p style="font-weight: 200; font-family: sans-serif; letter-spacing: 1.5px; margin: 60px auto; font-size: 20px">Your password has been changed successfully. <br  /> For more information contact our <a href="https://support.microsoft.com/es-es" style="text-decoration:none; color: #2980b9; font-size: 20px">Help Center</a></p>');
     }, 800);
 
 });
